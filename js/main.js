@@ -18,6 +18,7 @@ addEventListener("DOMContentLoaded", function(){
 	function add(starting, input) {
 		result = starting + Number(input.value);
 		document.querySelector('#result').textContent = starting + Number(input.value);
+		checkForNegative(starting);
 		userInput.value = "";
 
 	};
@@ -25,7 +26,17 @@ addEventListener("DOMContentLoaded", function(){
 	function subtract(starting, input) {
 		result = starting - Number(input.value);
 		document.querySelector('#result').textContent = starting - Number(input.value);
+		checkForNegative(starting);
 		userInput.value = "";
 	};
+
+	function checkForNegative(starting) {
+		if (starting < 0) {
+			result = result.style.color = 'red';
+		} 
+		else {
+			result = result.style.color = 'black';
+		}
+	}
 
 })
