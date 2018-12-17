@@ -4,8 +4,8 @@ addEventListener("DOMContentLoaded", function(){
 	var addButton = document.querySelector('#add');
 	var subButton = document.querySelector('#subtract');
 	var userInput = document.querySelector('#user-input');
-	var result = document.querySelector('#result').textContent;
-	result = 0;
+	//var result = document.querySelector('#result').textContent;
+	var result = 0;
 	addButton.addEventListener('click', function(e){
 		e.preventDefault();
 		add(result, userInput);
@@ -19,7 +19,7 @@ addEventListener("DOMContentLoaded", function(){
 		result = starting + Number(input.value);
 		document.querySelector('#result').textContent = starting + Number(input.value);
 		checkForNegative(starting);
-		userInput.value = "";
+		userInput.value = 1;
 
 	};
 
@@ -27,15 +27,15 @@ addEventListener("DOMContentLoaded", function(){
 		result = starting - Number(input.value);
 		document.querySelector('#result').textContent = starting - Number(input.value);
 		checkForNegative(starting);
-		userInput.value = "";
+		userInput.value = 1;
 	};
 
 	function checkForNegative(starting) {
 		if (starting < 0) {
-			result = result.style.color = 'red';
+			document.querySelector('#result').style.color = 'red';
 		} 
 		else {
-			result = result.style.color = 'black';
+			document.querySelector('#result').style.color = 'black';
 		}
 	}
 
