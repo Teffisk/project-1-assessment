@@ -1,0 +1,46 @@
+body {
+	font-size: 50px;
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-weight: 600;
+}
+
+#container {
+	padding-top: 40px;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#result {
+	text-align: center;
+}
+
+form {
+	color: black;
+}
+
+input {
+	font-size: 40px;
+	color: black;
+	text-align: center;
+	border: 3px solid grey;
+	border-radius: 8px;
+	width: 90px;
+}
+
+button {
+	color: white;
+	background-color: grey;
+	height: 50px;
+	width: 50px;
+	border: 3px solid white;
+	border-radius: 10px;
+	font-size: 30px;
+}
+
+button:hover {
+	color: grey;
+	background-color: white;
+	border: 3px solid grey;
+}
+
